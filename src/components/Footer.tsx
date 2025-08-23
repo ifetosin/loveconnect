@@ -1,16 +1,16 @@
-
-import { Heart, Mail, ExternalLink, Play, Music, Camera } from 'lucide-react';
-import { SOCIAL_LINKS, CONTACT_EMAIL } from '../data/content';
+import { Heart, Mail, ExternalLink } from "lucide-react";
+import { FaYoutube, FaInstagram, FaSpotify } from "react-icons/fa";
+import { SOCIAL_LINKS, CONTACT_EMAIL } from "../data/content";
 
 const Footer = () => {
   const getIcon = (platform: string) => {
     switch (platform.toLowerCase()) {
-      case 'youtube':
-        return Play;
-      case 'spotify':
-        return Music;
-      case 'instagram':
-        return Camera;
+      case "youtube":
+        return FaYoutube;
+      case "spotify":
+        return FaSpotify;
+      case "instagram":
+        return FaInstagram;
       default:
         return ExternalLink;
     }
@@ -29,8 +29,9 @@ const Footer = () => {
               <h3 className="text-2xl font-bold">Love Connect</h3>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Championing godly relationships and Christ-centered marriages through 
-              faith, wisdom, and community. Join us on this beautiful journey of love.
+              Championing godly relationships and Christ-centered marriages
+              through faith, wisdom, and community. Join us on this beautiful
+              journey of love.
             </p>
           </div>
 
@@ -38,7 +39,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Get in Touch</h4>
             <div className="space-y-3">
-              <a 
+              <a
                 href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors"
               >
@@ -46,8 +47,8 @@ const Footer = () => {
                 <span>{CONTACT_EMAIL}</span>
               </a>
               <p className="text-gray-400 text-sm">
-                We'd love to hear from you! Send us your questions, prayer requests, 
-                or just say hello.
+                We'd love to hear from you! Send us your questions, prayer
+                requests, or just say hello.
               </p>
             </div>
           </div>
@@ -79,9 +80,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Love Connect Podcast. All rights reserved.
-            </p>
+            <div>
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} Love Connect. All rights
+                reserved.
+              </p>
+            </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <span>Made with ❤️ for the Kingdom</span>
             </div>

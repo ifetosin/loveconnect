@@ -5,15 +5,15 @@ import { TESTIMONIALS } from '../data/content';
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === TESTIMONIALS.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
+ useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === TESTIMONIALS.length - 1 ? 0 : prevIndex + 1
+    );
+  }, 20000); 
 
-    return () => clearInterval(timer);
-  }, []);
+  return () => clearInterval(timer);
+}, []);
 
   const goToPrevious = () => {
     setCurrentIndex(currentIndex === 0 ? TESTIMONIALS.length - 1 : currentIndex - 1);
@@ -49,9 +49,6 @@ const Testimonials = () => {
               <div className="space-y-2">
                 <p className="text-lg font-bold text-gray-800">
                   {TESTIMONIALS[currentIndex].name}
-                </p>
-                <p className="text-rose-500 font-medium">
-                  {TESTIMONIALS[currentIndex].relationship}
                 </p>
               </div>
             </div>
