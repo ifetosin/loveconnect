@@ -33,7 +33,7 @@ const BookSection = () => {
 
           {/* CTA */}
           <a
-            href="" // replace with real link
+            href="/read-book" // replace with real link
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-xl shadow-md transition-transform transform hover:scale-105"

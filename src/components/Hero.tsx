@@ -2,11 +2,15 @@ import React from "react";
 import { Heart, Calendar } from "lucide-react";
 import CountdownToast from "./CountdownToast";
 
+const EVENT_DATE = new Date("2025-08-30T17:00:00");
+
 interface HeroProps {
   onRegisterClick: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
+  const eventPassed = new Date().getTime() > EVENT_DATE.getTime();
+
   return (
     <section className="relative bg-gradient-to-br from-rose-50 via-pink-50 to-orange-50 overflow-hidden pb-20">
       {/* Countdown Toast */}
@@ -16,9 +20,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-16 left-6 w-16 h-16 sm:w-24 sm:h-24 bg-rose-300 rounded-full blur-2xl"></div>
-        <div className="absolute top-32 right-8 w-20 h-20 sm:w-32 sm:h-32 bg-pink-300 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 left-1/3 w-20 h-20 sm:w-28 sm:h-28 bg-orange-300 rounded-full blur-2xl"></div>
+        {/* ...background blobs... */}
       </div>
 
       {/* Hero Content */}
@@ -45,14 +47,23 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
 
         {/* CTA Button */}
         <div className="space-y-4">
-          <button
-            onClick={onRegisterClick}
-            className="group inline-flex items-center px-5 py-3 sm:px-7 sm:py-3.5 bg-gradient-to-r from-rose-500 to-pink-600 text-white text-sm sm:text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-          >
-            <Calendar className="w-5 h-5 mr-2 sm:mr-3 group-hover:animate-pulse" />
-            Register for Our Anniversary
-            <br className="inline md:hidden" /> and Book Launch
-          </button>
+          {eventPassed ? (
+            <button
+              disabled
+              className="inline-flex items-center px-5 py-3 sm:px-7 sm:py-3.5 bg-gray-300 text-gray-700 text-sm sm:text-lg font-semibold rounded-full shadow-md cursor-default"
+            >
+              🎉 Thank you for celebrating with us!
+            </button>
+          ) : (
+            <button
+              onClick={onRegisterClick}
+              className="group inline-flex items-center px-5 py-3 sm:px-7 sm:py-3.5 bg-gradient-to-r from-rose-500 to-pink-600 text-white text-sm sm:text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              <Calendar className="w-5 h-5 mr-2 sm:mr-3 group-hover:animate-pulse" />
+              Register for Our Anniversary
+              <br className="inline md:hidden" /> and Book Launch
+            </button>
+          )}
 
           <p className="text-gray-500 text-xs sm:text-sm">
             Join others in building stronger, Christ-centred relationships.
