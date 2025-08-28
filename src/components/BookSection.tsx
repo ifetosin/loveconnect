@@ -33,9 +33,8 @@ const BookSection = () => {
             giving. Each lesson is a reminder that thriving love is built
             through grace, patience, and God’s design.
           </p>
-          // inside BookSection
           <Link
-            to="/read-book"
+            to="/blooming-together"
             className="inline-block px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-xl shadow-md transition-transform transform hover:scale-105"
           >
             Get the Book
