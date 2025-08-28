@@ -35,6 +35,8 @@ const BookSection = () => {
           </p>
           <Link
             to="/blooming-together"
+            onClick={(e) => e.preventDefault()}
+            target="_blank"
             className="inline-block px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-xl shadow-md transition-transform transform hover:scale-105"
           >
             Get the Book
