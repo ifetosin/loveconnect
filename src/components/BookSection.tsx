@@ -1,10 +1,13 @@
-import bookCover from '../images/book_cover.jpeg';
+import bookCover from "../images/book_cover.jpeg";
+import { Link } from "react-router-dom";
 
 const BookSection = () => {
   return (
-    <section id="book" className="py-20 bg-gradient-to-br from-pink-50 to-rose-50">
+    <section
+      id="book"
+      className="py-20 bg-gradient-to-br from-pink-50 to-rose-50"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-        
         {/* Book Image */}
         <div className="flex justify-center">
           <img
@@ -27,19 +30,16 @@ const BookSection = () => {
             experiences, biblical wisdom, and heartfelt reflections. It walks
             you through the seasons of marriage and relationships, teaching
             about resilience in trials, faith as the foundation, the joy of
-            giving. Each lesson is a reminder that
-            thriving love is built through grace, patience, and God’s design.
+            giving. Each lesson is a reminder that thriving love is built
+            through grace, patience, and God’s design.
           </p>
-
-          {/* CTA */}
-          <a
-            href="/read-book" // replace with real link
-            target="_blank"
-            rel="noopener noreferrer"
+          // inside BookSection
+          <Link
+            to="/read-book"
             className="inline-block px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-xl shadow-md transition-transform transform hover:scale-105"
           >
             Get the Book
-          </a>
+          </Link>
         </div>
       </div>
     </section>

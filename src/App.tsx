@@ -69,7 +69,7 @@ useEffect(() => {
         />
 
         {/* Read Book page */}
-        <Route path="/read-book" element={<ReadBook />} />
+        <Route path="/blooming-together" element={<ReadBook />} />
       </Routes>
     </Router>
   );
