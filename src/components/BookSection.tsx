@@ -34,7 +34,7 @@ const BookSection = () => {
             through grace, patience, and God’s design.
           </p>
           <Link
-            to="/blooming-together"
+            to="https://selar.com/3r5464n373"
             target="_blank"
             className="inline-block px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-xl shadow-md transition-transform transform hover:scale-105"
           >
