@@ -21,7 +21,7 @@ const ReadBook = () => {
 };
 
 function App() {
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
   // Smooth scroll for navigation
 useEffect(() => {
