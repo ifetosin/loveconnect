@@ -13,7 +13,7 @@ const ReadBook = () => {
   return (
     <div className="w-screen h-screen">
       <iframe
-        src="https://docs.google.com/viewer?srcid=1fT6Sf-MA7VZG-nd6A78V0NOFALhLa5oS&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
+      src="https://docs.google.com/viewer?srcid=1gGVhBDPjdQhL23o3VB-xwD8m3ZD6lt8S&pid=explorer&efh=false&a=v&chrome=false&embedded=true"
         className="w-full h-full"
       ></iframe>
     </div>
